@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="menu.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BisLite - Home</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="bg-[#e8ebf1] header">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex justify-between items-center md:h-[120px] h-[80px] gap-4"
+        >
+          <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+          </div>
+
+          <div class="lg:hidden block cursor-pointer" id="menu-icon">
+            &#9776;
+          </div>
+
+          <div class="hidden lg:flex" id="menu">
+            <ul class="flex gap-8 text-base font-medium">
+              <li class="item p-2 active">
+                <a class="navItem" href="index.html">HOME</a>
+              </li>
+              <li class="item p-2">
+                <a class="navItem" href="#">ABOUT US</a>
+              </li>
+              <li class="item p-2 relative group">
+                <div class="flex items-center gap-2" id="services-menu">
+                  <a class="navItem" href="#">SERVICES</a
+                  ><img class="size-2" src="assets/img/arrow_down.png" alt="" />
+                </div>
+                <ul
+                  class="absolute left-0 top-full hidden lg:border-b-[5px] lg:border-[#2aacc8] bg-white shadow-lg group-hover:block font-normal text-sm w-48 px-1 grid-cols-1 divide-y"
+                  id="services-dropdown"
+                >
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Wordpress Design</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Mobile App Development</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Internet Marketing</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Social Media Management</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item p-2 relative group">
+                <div class="flex items-center gap-2" id="portfolio-menu">
+                  <a class="navItem" href="#">PORTFOLIO</a
+                  ><img class="size-2" src="assets/img/arrow_down.png" alt="" />
+                </div>
+                <ul
+                  class="absolute left-0 top-full hidden lg:border-b-[5px] lg:border-[#2aacc8] bg-white shadow-lg group-hover:block font-normal text-sm w-48 px-1 grid-cols-1 divide-y"
+                  id="portfolio-dropdown"
+                >
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Websites</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Wordpress </a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Mobile Apps</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Icons</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Logos</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Graphics</a>
+                  </li>
+                  <li class="p-2 hover:text-[#2aacc8]">
+                    <a href="#">Social Media Management</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item p-2">
+                <a class="navItem" href="#">BLOG</a>
+              </li>
+              <li class="item p-2">
+                <a class="navItem" href="#">CONTRACT US</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="fixed z-10 top-0 right-0 h-full sm:w-1/2 w-full bg-black bg-opacity-50 hidden justify-center items-center"
+            id="mobile-menu"
+          >
+            <div
+              class="bg-white p-8 rounded-lg w-full h-full overflow-y-auto relative"
+            >
+              <div
+                class="absolute top-2 right-2 cursor-pointer"
+                id="close-menu"
+              >
+                &#10005;
+              </div>
+              <ul class="flex flex-col gap-4 text-base font-medium">
+                <li class="p-2">
+                  <a href="index.html">HOME</a>
+                </li>
+                <li class="p-2">
+                  <a href="#">ABOUT US</a>
+                </li>
+                <li class="p-2 relative group">
+                  <div
+                    class="flex items-center gap-2"
+                    id="mobile-services-menu"
+                  >
+                    <a href="#">SERVICES</a>
+                    <img
+                      class="size-2"
+                      src="assets/img/arrow_down.png"
+                      alt=""
+                    />
+                  </div>
+                  <ul
+                    class="mt-2 bg-white shadow-lg hidden font-normal text-sm w-full px-1 grid-cols-1 divide-y z-10"
+                    id="mobile-services-dropdown"
+                  >
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Web Design</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Wordpress Design</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Mobile App Development</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Internet Marketing</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Social Media Management</a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="lg:hover:border-t-[5px] lg:hover:border-[#2aacc8] hover:bg-white lg:border-t-[5px] p-2 relative group"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                    id="mobile-portfolio-menu"
+                  >
+                    <a href="#">PORTFOLIO</a>
+                    <img
+                      class="size-2"
+                      src="assets/img/arrow_down.png"
+                      alt=""
+                    />
+                  </div>
+                  <ul
+                    class="mt-2 bg-white shadow-lg font-normal hidden text-sm w-full px-1 grid-cols-1 divide-y"
+                    id="mobile-portfolio-dropdown"
+                  >
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Websites</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Wordpress </a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Mobile Apps</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Icons</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Logos</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Graphics</a>
+                    </li>
+                    <li class="p-2 hover:text-[#2aacc8]">
+                      <a href="#">Social Media Management</a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="lg:hover:border-t-[5px] lg:hover:border-[#2aacc8] lg:border-t-[5px] p-2"
+                >
+                  <a href="#">BLOG</a>
+                </li>
+                <li
+                  class="lg:hover:border-t-[5px] lg:hover:border-[#2aacc8] lg:border-t-[5px] p-2"
+                >
+                  <a href="#">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Slide -->
+    <div class="md:pt-[19px] md:pb-[18px] pt-3 pb-2 bg-[#81e4ed]">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-center">
+          <img
+            class="w-full"
+            src="assets/img/banner_image.jpg"
+            alt="banner_image"
+          />
+        </div>
+
+        <div class="md:mt-4 mt-2">
+          <ul class="flex justify-center">
+            <li
+              class="mx-[9px] bg-[#71a3a7] rounded-full md:w-[14px] md:h-[14px] w-[8px] h-[8px] cursor-pointer"
+            >
+              <a href="index.html"></a>
+            </li>
+            <li
+              class="mx-[9px] bg-[#71a3a7] rounded-full md:w-[14px] md:h-[14px] w-[8px] h-[8px] cursor-pointer"
+            >
+              <a href="index.html"></a>
+            </li>
+            <li
+              class="mx-[9px] bg-white rounded-full md:w-[14px] md:h-[14px] w-[8px] h-[8px] cursor-pointer"
+            >
+              <a href="index.html"></a>
+            </li>
+            <li
+              class="mx-[9px] bg-[#71a3a7] rounded-full md:w-[14px] md:h-[14px] w-[8px] h-[8px] cursor-pointer"
+            >
+              <a href="index.html"></a>
+            </li>
+            <li
+              class="mx-[9px] bg-[#71a3a7] rounded-full md:w-[14px] md:h-[14px] w-[8px] h-[8px] cursor-pointer"
+            >
+              <a href="index.html"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contents -->
+    <div class="bg-[#e8ebf1]">
+      <div class="container mx-auto px-4">
+        <div class="md:flex">
+          <!-- CLEAN THEME -->
+          <div class="md:mt-14 mt-5 md:mr-10">
+            <div class="flex items-center mb-[15px]">
+              <div>
+                <img src="assets/img/pen_icon.png" alt="" />
+              </div>
+              <div class="pl-5">
+                <h1 class="font-semibold">CLEAN THEME</h1>
+              </div>
+            </div>
+            <div>
+              <p class="text-[13px] md:mb-6 mb-3">
+                Ut nec lorem id orci convallis porta. Donec pharetra neque eu
+                velit dictum molestie. Duis porta gravida augue sed viverra.
+                Quisque at nulla leo, non aliquet mi.
+              </p>
+              <a
+                href="index.html"
+                class="flex items-center gap-2 text-[#2aacc8] hover:underline"
+              >
+                <img src="assets/img/arrow_right.png" alt="Arrow Right" />
+                <span class="text-sm">Read More</span>
+              </a>
+            </div>
+          </div>
+          <!-- RESPONSIVE DESIGN -->
+          <div class="md:mt-14 md:mr-10 mt-8">
+            <div class="flex items-center mb-[15px]">
+              <div>
+                <img src="assets/img/screen_icon.png" alt="" />
+              </div>
+              <div class="pl-5">
+                <h1 class="font-semibold">RESPONSIVE DESIGN</h1>
+              </div>
+            </div>
+            <div>
+              <p class="text-[13px] md:mb-6 mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                euismod placerat dui et tincidunt. Sed sollicitudin posuere
+                auctor. Phasellus at ultricies nisl. Integer at leo eros.
+              </p>
+              <a
+                href="index.html"
+                class="flex items-center gap-2 text-[#2aacc8] hover:underline"
+              >
+                <img src="assets/img/arrow_right.png" alt="Arrow Right" />
+                <span class="text-sm">Read More</span>
+              </a>
+            </div>
+          </div>
+          <!-- FULLY LAYERED PSD -->
+          <div class="md:mt-14 md:mr-10 mt-8">
+            <div class="flex items-center mb-[15px]">
+              <div>
+                <img src="assets/img/layer_icon.png" alt="" />
+              </div>
+              <div class="pl-5">
+                <h1 class="font-semibold">FULLY LAYERED PSD</h1>
+              </div>
+            </div>
+            <div>
+              <p class="text-[13px] md:mb-6 mb-3">
+                Phasellus lobortis metus non augue sodales volutpat. Vestibulum
+                sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec
+                purus cursus pretium sed id magna.
+              </p>
+              <a
+                href="index.html"
+                class="flex items-center gap-2 text-[#2aacc8] hover:underline"
+              >
+                <img src="assets/img/arrow_right.png" alt="Arrow Right" />
+                <span class="text-sm">Read More</span>
+              </a>
+            </div>
+          </div>
+          <!-- READY FOR CODING -->
+          <div class="md:mt-14 mt-8">
+            <div class="flex items-center mb-[15px]">
+              <div>
+                <img src="assets/img/paperplane_icon.png" alt="" />
+              </div>
+              <div class="pl-5">
+                <h1 class="font-semibold">READY FOR CODING</h1>
+              </div>
+            </div>
+            <div>
+              <p class="text-[13px] md:mb-6 mb-3">
+                Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam
+                quis euismod commodo, elit est porta quam, non placerat eros
+                neque porta ante. Fusce quis odio urna.
+              </p>
+              <a
+                href="index.html"
+                class="flex items-center gap-2 text-[#2aacc8] hover:underline pb-4"
+              >
+                <img src="assets/img/arrow_right.png" alt="Arrow Right" />
+                <span class="text-sm">Read More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LATEST WORKS -->
+    <div class="bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex mt-5 mb-4">
+            <img class="pr-5" src="assets/img/cursor_icon.png" alt="" />
+            <h1 class="font-medium">LATEST WORKS</h1>
+          </div>
+          <div class="flex mt-5 gap-2">
+            <a href="index.html"
+              ><img class="w-5 h-5" src="assets/img/bluearrow_left.png" alt=""
+            /></a>
+            <a href="index.html">
+              <img class="w-5 h-5" src="assets/img/bluearrow_right.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="border-y-[1px] border-[#dfe1e5] md:flex grid items-center">
+          <div class="relative inline-block md:mx-4 md:my-8 my-4 group">
+            <img
+              src="assets/img/latest_work01.jpg"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <a href="index.html">
+              <img
+                src="assets/img/sample_view.gif"
+                alt=""
+                class="absolute left-0 bottom-0 w-full h-1/2 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+            /></a>
+          </div>
+          <div class="relative inline-block md:mx-4 md:my-8 group">
+            <img
+              src="assets/img/latest_work02.jpg"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <a href="index.html"
+              ><img
+                src="assets/img/sample_view.gif"
+                alt=""
+                class="absolute left-0 bottom-0 w-full h-1/2 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+            /></a>
+          </div>
+          <div class="relative inline-block md:mx-4 md:my-8 mt-4 group">
+            <img
+              src="assets/img/latest_work03.jpg"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <a href="index.html"
+              ><img
+                src="assets/img/sample_view.gif"
+                alt=""
+                class="absolute left-0 bottom-0 w-full h-1/2 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+            /></a>
+          </div>
+          <div class="relative inline-block md:mx-4 md:my-8 my-4 group">
+            <img
+              src="assets/img/latest_work04.jpg"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <a href="index.html"
+              ><img
+                src="assets/img/sample_view.gif"
+                alt=""
+                class="absolute left-0 bottom-0 w-full h-1/2 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TESTIMONIALS -->
+    <div class="container mx-auto px-4 md:flex gap-8">
+      <div class="md:w-1/2 w-full">
+        <div class="flex mt-5 mb-4">
+          <div>
+            <img class="pr-4" src="assets/img/speechcloud_icon.png" alt="" />
+          </div>
+          <div>
+            <h1 class="font-medium">TESTIMONIALS</h1>
+          </div>
+        </div>
+        <div class="pb-5">
+          <p class="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut
+            nulla sapien, at aliquam erat. Sed vitae massa tellus. Aliquam
+            commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis
+            in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam nec
+            nisi in nisl euismod fringilla.
+          </p>
+          <br />
+          <span class="font-medium text-sm"
+            >John Travis, CEO, DomainName.com</span
+          >
+        </div>
+      </div>
+      <div>
+        <div class="flex mt-5 mb-4">
+          <div>
+            <img class="pr-4" src="assets/img/people_icon.png" alt="" />
+          </div>
+          <div>
+            <h1 class="font-medium">OUR CLIENTS</h1>
+          </div>
+        </div>
+        <div
+          class="grid md:grid-rows-2 grid-rows-3 grid-flow-col gap-0 md:mb-10 mb-4"
+        >
+          <div><img src="assets/img/client01.jpg" alt="" /></div>
+          <div><img src="assets/img/client02.jpg" alt="" /></div>
+          <div><img src="assets/img/client03.jpg" alt="" /></div>
+          <div><img src="assets/img/client04.jpg" alt="" /></div>
+          <div><img src="assets/img/client05.jpg" alt="" /></div>
+          <div><img src="assets/img/client06.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mx-auto px-4 md:flex bg-[#e8fcfe] md:p-8 p-2 border-[1px] border-[#81e4ed] md:gap-10"
+    >
+      <p class="text-base md:w-2/3 w-full mb-3">
+        This is a clean and modern, four column website PSD template. You can
+        code it into a Wordpress website, HTML5 responsive website for your
+        personal or client works. So ahead and download this wonderful PSD
+        template!
+      </p>
+      <a href="index.html" class="relative inline-block">
+        <img
+          src="assets/img/download_button.png"
+          alt=""
+          class="w-full h-auto block"
+        />
+        <span
+          class="absolute inset-0 w-[212px] h-[70px] flex items-center justify-center text-black font-bold bg-opacity-50 pl-8 pb-3 rounded-md hover:text-white"
+        >
+          DOWNLOAD PSD
+        </span>
+      </a>
+    </div>
+    <!-- Footer -->
+    <div class="bg-[#e8ebf1] md:mt-10 mt-4">
+      <div class="container mx-auto px-4 md:flex">
+        <div class="md:mt-8 md:mr-16 md:mb-10 mb-6 md:w-1/4 w-full">
+          <h1 class="font-semibold md:mb-5 mb-3 pt-3 md:pt-0">ABOUT US</h1>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor.
+            Phasellus at ultricies nisl. Integer at leo eros. Ut nec lorem id
+            orci convallis porta. Donec pharetra neque eu velit dictum molestie.
+          </p>
+        </div>
+
+        <div class="md:mt-8 md:mr-16 md:mb-10 mb-4">
+          <h1 class="font-semibold md:mb-5 mb-3">EXPLORE</h1>
+          <ul class="text-sm grid gap-2">
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">About us</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Services</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Portfolio</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:mt-8 md:mr-16 md:mb-10 mb-4">
+          <h1 class="font-semibold md:mb-5 mb-3">BROWSE</h1>
+          <ul class="text-sm grid gap-2">
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Careers</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Press & Media</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Contact Us</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Terms of Service</a>
+            </li>
+            <li class="hover:text-[#2aacc8]">
+              <a href="index.html">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:mt-8 md:mb-10 md:mr-16 mb-4">
+          <h1 class="font-semibold md:mb-5 mb-3">CONTRACT US</h1>
+          <div class="grid gap-3">
+            <div>
+              <p class="text-base font-medium">BisLite Inc.</p>
+              <p class="text-sm">
+                Always Street 265 <br />
+                0X - 125 - Canada
+              </p>
+            </div>
+            <div>
+              <p class="text-sm">Phone: 987-6543-210</p>
+              <p class="text-sm">Fax: 987-6543-210</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:mt-8 md:mb-10 mb-4">
+          <h1 class="font-medium md:mb-5 mb-3">CONNECT WITH US</h1>
+          <div class="grid grid-cols-3 gap-3">
+            <div>
+              <a href="index.html"
+                ><img src="assets/img/facebook_icon.png" alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="index.html"
+                ><img src="assets/img/dribbble_icon.png" alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="index.html"
+                ><img src="assets/img/pinterest_icon.png" alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="index.html"
+                ><img src="assets/img/linkedin_icon.png" alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="index.html"
+                ><img src="assets/img/skype_icon.png" alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="index.html"
+                ><img src="assets/img/sharethis_icon.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 md:justify-between md:flex pb-10">
+        <div class="md:w-3/4 w-full mb-5 md:mb-0">
+          <p class="text-sm">
+            © Copyright 2012 - BisLite Inc. All rights reserved. Some free icons
+            used here are created by Brankic1979.com. Client Logos are copyright
+            and trademark of the respective owners / companies.
+          </p>
+        </div>
+        <div>
+          <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

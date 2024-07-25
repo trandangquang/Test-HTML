@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1000px !important;
+}
+
+#menu .item .navItem {
+  position: relative;
+}
+#menu .item .navItem:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 0;
+  background-color: #2aacc8;
+  top: -9px;
+  transition: all 0.25s;
+}
+#menu .item.active .navItem:before,
+#menu .item:hover .navItem:before {
+  width: 100%;
+}
